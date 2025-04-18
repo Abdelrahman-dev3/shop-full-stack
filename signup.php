@@ -159,7 +159,6 @@ if ($status == 'signup') {
             $Add = $stmt->execute([$username, $password, $email, $fullname, $verification_code]);
             
             if ($Add) {
-                echo $email;
                 try {
                     $mail->isSMTP();
                     $mail->Host = 'smtp.gmail.com';
@@ -171,7 +170,7 @@ if ($status == 'signup') {
                     $mail->CharSet = 'UTF-8';
 
                     $mail->setFrom('abdoahmed2010201020@gmail.com', 'ShopMaster');
-                    $mail->addAddress('abdoahmed2010201020@gmail.com');// $email
+                    $mail->addAddress($email);
                     $mail->isHTML(true);
                     $mail->Subject = 'التحقق من البريد الإلكتروني';
                     $mail->Body = "مرحباً $fullname,<br>";
