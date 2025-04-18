@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #4b6cb7, #182848);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+}
+
+.logo span {
+    color: #00d4ff;
+}
+
+.nav-links {
+    margin-bottom: 0px;
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #00d4ff;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background: #00d4ff;
+    transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+}
+
+.icons a {
+    margin-left: 15px;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.icons a:hover {
+    transform: scale(1.2);
+    color: #00d4ff;
+}
+
+.login {
+    padding: 5px 15px;
+    border-radius: 5px;
+    background: #00d4ff;
+    color: #fff;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.login:hover {
+    background: white;
+    color: #4b6cb7;
+}
+
+body {
+    background: #f5f5f5;
+    text-align: center;
+}
+.electronics h2 {
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    padding: 15px;
+}
+.product {
+    min-height: 100%;
+    cursor: pointer;
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    max-width: 250px;
+}
+.product:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+.product img {
+    width: 100%;
+    border-radius: 8px;
+}
+.product h3 {
+    font-size: 1.1em;
+    margin: 5px 0;
+}
+.product p {
+    font-size: 0.9em;
+    margin: 3px 0;
+}
+.product .prt{
+    color: green;
+
+}
+.product button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 8px;
+    margin-top: 5px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.3s, transform 0.2s;
+    font-size: 0.9em;
+}
+.product button:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.search-box {
+    margin: 0 2rem;
+    flex: 1;
+    max-width: 500px;
+}
+
+.search-box form {
+    display: flex;
+    align-items: center;
+    background: #f5f5f5;
+    border-radius: 25px;
+    padding: 0 1rem;
+    transition: all 0.3s ease;
+}
+
+.search-box form:focus-within {
+    background: white;
+    box-shadow: 0 0 0 2px #000DFF;
+}
+
+.search-box input {
+    flex: 1;
+    border: none;
+    background: none;
+    font-size: 1rem;
+    color: #333;
+    outline: none;
+}
+
+.search-box input::placeholder {
+    color: #999;
+}
+
+.search-box button {
+    background: none;
+    border: none;
+    color: #666;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.search-box button:hover {
+    color: #000DFF;
+}
+
+@media (max-width: 768px) {
+    .search-box {
+        margin: 1rem 0;
+        max-width: 100%;
+    }
+}
+
+.cart-icon {
+    position: relative;
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.cart-icon:hover {
+    color: #4A6BD5;
+}
+
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: #4A6BD5;
+    color: white;
+    font-size: 0.8rem;
+    padding: 2px 6px;
+    border-radius: 50%;
+    min-width: 18px;
+    text-align: center;
+    animation: bounce 0.5s ease;
+}
+
+@keyframes bounce {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}

@@ -1,0 +1,67 @@
+a{
+    text-decoration: none;
+}
+
+.main-content table {
+    width: 102%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #1e293b8c; 
+    color: #ffffff;
+    box-shadow: 0px 3px 20px 0px black;
+}
+
+th, td {
+    border: 1px solid #999;
+    text-align: center;
+    padding-bottom: 11px;
+    padding-top: 6px;
+}
+
+th {
+    background-color: #000000c2;
+    color: white;
+}
+
+.btn_ {
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.btn-success {
+    background-color: #28a745;
+    color: white;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    color: white;
+}
+
+.btn-accept{
+    margin-top: 6px;
+    background: #0056b3;
+    color: #fff;
+    margin-left: 4px;
+}
+
+.btn_:hover {
+    opacity: 0.8;
+}
+
+.add-member {
+    border: none;
+    cursor: pointer;
+    box-shadow: black 4px 3px 6px;
+    background: #206aa9b8;
+    display: block;
+    text-align: left;
+    margin-top: 10px;
+    color: #ffffff;
+    width: fit-content;
+    padding: 8px;
+    border-radius: 7px;
+    text-decoration: none;
+}
